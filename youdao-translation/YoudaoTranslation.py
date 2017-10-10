@@ -1,18 +1,16 @@
 #/usr/bin/env python
 #coding=utf8
-# YoudaoTranslation.py
 
 import sys
+import os
 import hashlib
 import random
 from workflow import Workflow3
 from workflow import web
 
-# 请到有道智云网站http://ai.youdao.com/gw.s申请API Key
-APP_KEY = '***'
-SECRET_KEY = '***'
-
-def translate(appKey, secretKey, q):
+def translate(q):
+    appKey = os.getenv('app_key', '').strip()
+    secretKey = os.getenv('secret_key', '').strip()
     fromLang = 'auto'
     toLang = 'auto'
     salt = random.randint(1, 65536)
@@ -29,7 +27,7 @@ def main(wf):
     args = wf.args
     q = args[0]
 
-    data = translate(APP_KEY, SECRET_KEY, q)
+    data = translate(q)
 
     translationData = data.get('translation')
     if translationData is not None:
