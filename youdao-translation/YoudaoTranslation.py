@@ -43,14 +43,11 @@ def main(wf):
     webData = data.get('web')
     if webData is not None:
         for webDict in webData:
-            title = u''
             valueList = webDict.get('value')
             for value in valueList:
-                if len(title) > 0:
-                    title = title + u', '
-                title = title + value
-            subtitle = u'网络释义: ' + webDict.get('key')
-            wf.add_item(title=title, subtitle=subtitle, arg=title, copytext=True, valid=True)
+                title = value
+                subtitle = u'网络释义: ' + webDict.get('key')
+                wf.add_item(title=title, subtitle=subtitle, arg=title, copytext=True, valid=True)
 
     wf.send_feedback()
 
