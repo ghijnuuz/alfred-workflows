@@ -71,7 +71,7 @@
 				<key>argumenttype</key>
 				<integer>0</integer>
 				<key>escaping</key>
-				<integer>39</integer>
+				<integer>102</integer>
 				<key>keyword</key>
 				<string>yd</string>
 				<key>queuedelaycustom</key>
@@ -211,8 +211,8 @@ say $query</string>
 		<string>secret_key</string>
 	</array>
 	<key>version</key>
-	<string>0.0.1</string>
+	<string>0.0.2</string>
 	<key>webaddress</key>
-	<string>https://github.com/ghijnuuz/alfred-workflows</string>
+	<string>https://github.com/ghijnuuz/alfred-workflows/tree/master/youdao-translation</string>
 </dict>
 </plist>
